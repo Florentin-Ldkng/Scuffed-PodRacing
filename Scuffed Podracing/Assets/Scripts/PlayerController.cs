@@ -2,7 +2,7 @@
 
 public class PlayerController : MonoBehaviour
 {
-    public bool isMoveable;
+    public bool isMoveable = true;
 
     void Update()
     {
