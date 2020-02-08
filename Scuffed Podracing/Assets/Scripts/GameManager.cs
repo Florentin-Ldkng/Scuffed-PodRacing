@@ -10,11 +10,16 @@ public class GameManager : MonoBehaviour
     public float CountdownLength = 10.0f;
     public float Lap1;
     public float Lap2;
+    public GameObject Player;
+
+    void Start()
+    {
+        StartCountDown();
+    }
 
     void Update()
     {
-       test();
-       Timer();
+        Timer();
     }
 
     public void StartCountDown()
@@ -27,12 +32,13 @@ public class GameManager : MonoBehaviour
         if (_lapped == true)
         {
             Lap2 = _lapTime - Lap1;
-            Debug.Log(Mathf.RoundToInt(Lap2));      //Repleace this Debug with a hud change
+            Debug.Log(Mathf.RoundToInt(Lap2)); //Repleace this Debug with a hud change
         }
+
         if (_lapped == false)
         {
             Lap1 = _lapTime;
-            Debug.Log(Mathf.RoundToInt(Lap1));      //Repleace this Debug with a hud change
+            Debug.Log(Mathf.RoundToInt(Lap1)); //Repleace this Debug with a hud change
             _lapped = true;
         }
     }
@@ -43,35 +49,21 @@ public class GameManager : MonoBehaviour
         if (_startCountdown == true)
         {
             CountdownLength -= Time.deltaTime;
-            Debug.Log(Mathf.RoundToInt(CountdownLength));     //Replace the debugs with hud changes
+            Debug.Log(Mathf.RoundToInt(CountdownLength)); //Replace the debugs with hud changes
             if (CountdownLength <= 0)
             {
                 _startCountdown = false;
                 _startTimer = true;
                 _startTime = Time.time;
+                var movement = Player.GetComponent<PlayerController>();
+                movement.IsMoveable = true;
             }
         }
 
         if (_startTimer == true)
         {
             _lapTime = Time.time - _startTime;
-            Debug.Log(Mathf.RoundToInt(_lapTime));    //Replace the debugs with hud changes
-        }
-    }
-
-
-    /// <summary>
-    /// Test has to be replaced by a real call
-    /// </summary>
-    public void test()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            StartCountDown();
-        }
-        if (Input.GetMouseButtonDown(1))
-        {
-            GetLapTime();
+            //Debug.Log(Mathf.RoundToInt(_lapTime));    //Replace the debugs with hud changes
         }
     }
 }

@@ -6,7 +6,7 @@ public class Health : MonoBehaviour
 
     public void GetDamage(int amount)
     {
-       TotalHealth -= amount;
+        TotalHealth -= amount;
     }
 
     public void ResetHealth()
