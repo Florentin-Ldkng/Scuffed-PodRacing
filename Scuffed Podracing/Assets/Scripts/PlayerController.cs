@@ -2,7 +2,7 @@
 
 public class PlayerController : MonoBehaviour
 {
-    public bool isMoveable = true;
+    public bool IsMoveable = false;
 
     void Update()
     {
@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 
     public void Movement()
     {
-        if (isMoveable == true)
+        if (IsMoveable == true)
         {
             var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
             var z = Input.GetAxis("Vertical") * Time.deltaTime * 50.0f;
