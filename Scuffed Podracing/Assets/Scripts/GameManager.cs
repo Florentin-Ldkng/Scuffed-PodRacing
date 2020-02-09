@@ -3,11 +3,11 @@
 public class GameManager : MonoBehaviour
 {
     private float _startTime;
-    private float _lapTime;
+    public float _lapTime;
     private bool _startCountdown;
-    private bool _startTimer;
+    public bool _startTimer;
     private bool _lapped = false;
-    public float CountdownLength = 10.0f;
+    public float CountdownLength = 5.0f;
     public float Lap1;
     public float Lap2;
     public GameObject Player;
@@ -63,7 +63,6 @@ public class GameManager : MonoBehaviour
         if (_startTimer == true)
         {
             _lapTime = Time.time - _startTime;
-            //Debug.Log(Mathf.RoundToInt(_lapTime));    //Replace the debugs with hud changes
         }
     }
 }

@@ -2,7 +2,12 @@
 
 public class Health : MonoBehaviour
 {
-    public int TotalHealth = 100;
+    public float TotalHealth = 75f;
+
+    private void Start()
+    {
+        TotalHealth = 50f;
+    }
 
     public void GetDamage(int amount)
     {
@@ -11,6 +16,6 @@ public class Health : MonoBehaviour
 
     public void ResetHealth()
     {
-        TotalHealth = 100;
+        TotalHealth = 100f;
     }
 }
