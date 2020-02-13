@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -23,6 +24,9 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Method "Continue" for the function of the continue button
+    /// </summary>
     public void Continue()
     {
         pauseMenu.SetActive(false);
@@ -30,11 +34,22 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    public void Pause()
+    /// <summary>
+    /// Method Pause for pausing the game
+    /// </summary>
+    void Pause()
     {
         pauseMenu.SetActive(true);
         Paused = true;
         Time.timeScale = 0f;
+    }
+
+    /// <summary>
+    /// Function for the "Back to Start Menu Button"
+    /// </summary>
+    public void BackToStartMenu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
 }

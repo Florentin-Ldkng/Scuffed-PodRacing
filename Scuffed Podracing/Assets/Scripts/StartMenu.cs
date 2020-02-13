@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class StartMenu : MonoBehaviour
 {
     /// <summary>
-    /// Play Button Function for starting the game.
+    /// Play Button Function for starting the game
     /// </summary>
     public void PlayGame()
     {
@@ -14,7 +14,7 @@ public class StartMenu : MonoBehaviour
     }
 
     /// <summary>
-    /// Quit Button Function to exit the game.
+    /// Quit Button Function to exit the game
     /// </summary>
     public void QuitGame()
     {
