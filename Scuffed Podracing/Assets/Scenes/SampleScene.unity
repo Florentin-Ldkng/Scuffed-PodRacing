@@ -8635,7 +8635,7 @@ MonoBehaviour:
   TimerText: {fileID: 917382541}
   LapTime1Text: {fileID: 949105780}
   LapTime2Text: {fileID: 1887584736}
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 207760084}
   health: {fileID: 718023868}
   HealthBar: {fileID: 803137482}
 --- !u!4 &718023873 stripped
