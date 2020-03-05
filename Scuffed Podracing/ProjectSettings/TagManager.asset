@@ -6,6 +6,15 @@ TagManager:
   tags:
   - Checkpoint
   - Map
+  - Character
+  - Destination1
+  - Destination2
+  - Destination3
+  - Destination4
+  - Destination5
+  - Destination6
+  - Destination7
+  - Destination8
   layers:
   - Default
   - TransparentFX
