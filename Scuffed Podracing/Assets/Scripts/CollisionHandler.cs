@@ -9,11 +9,13 @@ public class CollisionHandler : MonoBehaviour
     public GameObject Checkpoint3;
     public GameObject Checkpoint4;
     public Rigidbody rb;
+    public AudioSource collisionSound;
 
     void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Map"))
         {
+            GetComponent<AudioSource>().Play();
             Respawning();
         }
     }
