@@ -16,7 +16,7 @@ public class CollisionHandler : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Map"))
+       if (other.gameObject.CompareTag("Map"))
         {
             _audioSource = GetComponent<AudioSource>();
             _audioSource.Play(0);
@@ -41,7 +41,7 @@ public class CollisionHandler : MonoBehaviour
                 Time.timeScale = 0;
             }
             Respawning();
-        }
+        } 
     }
 
     private void Respawning()

@@ -20,6 +20,7 @@ public class LoseScreen : MonoBehaviour
     public void BackToStartMenu()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        Time.timeScale = 1f;
     }
 
     /// <summary>
@@ -28,5 +29,6 @@ public class LoseScreen : MonoBehaviour
     public void BackToStartMenuTwo()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+        Time.timeScale = 1f;
     }
 }
