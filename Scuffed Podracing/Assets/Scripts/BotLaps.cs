@@ -3,6 +3,8 @@
 public class BotLaps : MonoBehaviour
 {
     public int _lapCounter;
+
+    public GameObject LoseScreen;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +16,7 @@ public class BotLaps : MonoBehaviour
     {
         if (_lapCounter >= 3)
         {
-            //Trigger Lose Screen
+            LoseScreen.SetActive(true);
             Time.timeScale = 0f;
         }   
     }

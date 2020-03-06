@@ -44153,6 +44153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lapCounter: 0
+  LoseScreen: {fileID: 270890529}
 --- !u!4 &1973193950 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 21db04ffcfdc6b34dbfae3af89222397,

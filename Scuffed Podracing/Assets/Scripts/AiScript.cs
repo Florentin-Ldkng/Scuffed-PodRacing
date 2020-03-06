@@ -25,7 +25,7 @@ public class AiScript : MonoBehaviour
 
     void Update()
     {
-         Amena();
+         MoveLocker();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -64,7 +64,7 @@ public class AiScript : MonoBehaviour
         }
     }
 
-    private void Amena()
+    private void MoveLocker()
     {
         if (GetMovable.IsMoveable == true)
         {
