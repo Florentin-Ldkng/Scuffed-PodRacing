@@ -10,8 +10,8 @@ public class LoseScreen : MonoBehaviour
     /// </summary>
     public void TryAgain()
     {
-        Debug.Log("Load Scene Again!");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
     }
 
     /// <summary>
@@ -20,5 +20,13 @@ public class LoseScreen : MonoBehaviour
     public void BackToStartMenu()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
+    /// <summary>
+    /// Function for "BackToStartMenuButton"(Buildindex 2).
+    /// </summary>
+    public void BackToStartMenuTwo()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
 }

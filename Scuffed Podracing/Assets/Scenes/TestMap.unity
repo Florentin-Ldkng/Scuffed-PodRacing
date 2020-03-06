@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.43541214, g: 0.5930248, b: 0.8128141, a: 1}
+  m_IndirectSpecularColor: {r: 0.43541613, g: 0.5930195, b: 0.8128287, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5634,6 +5634,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e05ee61d6dad0e54eb51d1c8ec3becc6, type: 3}
+--- !u!1 &591558696 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4085847027695130032, guid: 7782d1497cd90eb41813a88619c47afc,
+    type: 3}
+  m_PrefabInstance: {fileID: 5655362078091708693}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &600737760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7215,7 +7221,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0.1015625, y: 0.03125, z: 0.02734375, w: -0.03125}
+  m_BoundingSphereOverride: {x: 7.6e-43, y: 2.3586e+9, z: -0.011338578, w: 3e-45}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -19936,12 +19942,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2131975760}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1929301435 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5655362078381294766, guid: 7782d1497cd90eb41813a88619c47afc,
-    type: 3}
-  m_PrefabInstance: {fileID: 5655362078091708693}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1936915517 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 21db04ffcfdc6b34dbfae3af89222397,
@@ -22698,7 +22698,7 @@ PrefabInstance:
         type: 3}
       propertyPath: LoseScreen
       value: 
-      objectReference: {fileID: 1929301435}
+      objectReference: {fileID: 591558696}
     - target: {fileID: 7570223011975531901, guid: 1637df5ddb0d3cf4884b03b4de54bfdb,
         type: 3}
       propertyPath: TimerText
