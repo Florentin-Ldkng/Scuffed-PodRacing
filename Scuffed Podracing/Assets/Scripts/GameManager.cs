@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public float Lap1;
     public float Lap2;
     public GameObject Player;
+    public GameObject WinScreen;
+    public GameObject HUD;
 
     void Start()
     {
@@ -33,6 +35,10 @@ public class GameManager : MonoBehaviour
         {
             Lap2 = _lapTime - Lap1;
             Debug.Log(Mathf.RoundToInt(Lap2)); //Repleace this Debug with a hud change
+            HUD.SetActive(false);
+            WinScreen.SetActive(true);
+            Time.timeScale = 0.25f;
+
         }
 
         if (_lapped == false)

@@ -14,18 +14,18 @@ public class AiScript : MonoBehaviour
     public GameObject CharacterDestination6;
     public GameObject CharacterDestination7;
     public GameObject CharacterDestination8;
+    public PlayerController GetMovable;
+    private bool _stared = false;
     NavMeshAgent theAgent;
 
     void Start()
     {
-        theAgent = GetComponent<NavMeshAgent>();
-        theAgent.SetDestination(CharacterDestination1.transform.position);
     }
 
 
     void Update()
     {
-        
+         Amena();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -61,6 +61,20 @@ public class AiScript : MonoBehaviour
         if (other.tag == "Destination8")
         {
             theAgent.SetDestination(CharacterDestination1.transform.position);
+        }
+    }
+
+    private void Amena()
+    {
+        if (GetMovable.IsMoveable == true)
+        {
+            if (_stared == false)
+            {
+                theAgent = GetComponent<NavMeshAgent>();
+                theAgent.SetDestination(CharacterDestination1.transform.position);
+                _stared = true;
+            }
+            
         }
     }
 }

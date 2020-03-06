@@ -2,20 +2,44 @@
 
 public class CollisionHandler : MonoBehaviour
 {
+
     public GameObject Respawner;
     public GameObject Start;
     public GameObject Checkpoint1;
     public GameObject Checkpoint2;
     public GameObject Checkpoint3;
     public GameObject Checkpoint4;
-    public Rigidbody rb;
-    public AudioSource collisionSound;
+    public GameObject LoseScreen;
+    public Health Health;
+    public Rigidbody RB;
+    private AudioSource _audioSource;
 
     void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Map"))
         {
-            GetComponent<AudioSource>().Play();
+            _audioSource = GetComponent<AudioSource>();
+            _audioSource.Play(0);
+            Health.GetDamage(25);
+            if (Health.TotalHealth <= 0f)
+            {
+                LoseScreen.SetActive(true);
+                Time.timeScale = 0;
+            }
+            
+
+            Respawning();
+        }
+        else
+        {
+            _audioSource = GetComponent<AudioSource>();
+            _audioSource.Play(0);
+            Health.GetDamage(25);
+            if (Health.TotalHealth <= 0f)
+            {
+                LoseScreen.SetActive(true);
+                Time.timeScale = 0;
+            }
             Respawning();
         }
     }
@@ -57,7 +81,7 @@ public class CollisionHandler : MonoBehaviour
 
     private void RigidBodyZero()
     {
-        rb.velocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
+        RB.velocity = Vector3.zero;
+        RB.angularVelocity = Vector3.zero;
     }
 }

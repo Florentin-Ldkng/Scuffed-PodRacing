@@ -1,12 +1,15 @@
-﻿using UnityEngine;
+﻿using System.Xml.Serialization;
+using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     public bool IsMoveable = false;
+    public AudioSource EngineSource;
 
     void Update()
     {
         Movement();
+
     }
 
     public void Movement()
@@ -18,6 +21,11 @@ public class PlayerController : MonoBehaviour
 
             transform.Rotate(0, x, 0);
             transform.Translate(0, 0, z);
+            EngineSource.volume = 5f;
+        }
+        else
+        {
+            EngineSource.volume = 0f;
         }
     }
 }
