@@ -1,5 +1,4 @@
-﻿using System.Xml.Serialization;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,7 +12,7 @@ public class PlayerController : MonoBehaviour
         Movement();
         Speed = (transform.position - _lastPosition).magnitude / Time.fixedDeltaTime;
         _lastPosition = transform.position;
-        EngineSource.volume = Speed / 5;
+        EngineSource.volume = Speed /100;
     }
 
     public void Movement()
