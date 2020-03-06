@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
         if (_lapped == true)
         {
             Lap2 = _lapTime - Lap1;
-            Debug.Log(Mathf.RoundToInt(Lap2)); //Repleace this Debug with a hud change
+            //Debug.Log(Mathf.RoundToInt(Lap2)); //Repleace this Debug with a hud change
             HUD.SetActive(false);
             WinScreen.SetActive(true);
             Time.timeScale = 0.25f;
@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
         if (_lapped == false)
         {
             Lap1 = _lapTime;
-            Debug.Log(Mathf.RoundToInt(Lap1)); //Repleace this Debug with a hud change
+            //Debug.Log(Mathf.RoundToInt(Lap1)); //Repleace this Debug with a hud change
             _lapped = true;
         }
     }
@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
         if (_startCountdown == true)
         {
             CountdownLength -= Time.deltaTime;
-            Debug.Log(Mathf.RoundToInt(CountdownLength)); //Replace the debugs with hud changes
+            //Debug.Log(Mathf.RoundToInt(CountdownLength)); //Replace the debugs with hud changes
             if (CountdownLength <= 0)
             {
                 _startCountdown = false;
