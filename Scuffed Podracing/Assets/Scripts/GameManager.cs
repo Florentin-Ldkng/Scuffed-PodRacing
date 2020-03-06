@@ -1,7 +1,15 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    /// <summary>
+    /// Florentin Lüdeking Im sry ;-; 
+    /// Funktionality 1: Timer and Countdown
+    /// Funktionality 2: Sets the lap time in the win screen
+    /// Funktionality 3: Setting movable after countdown
+    /// Funktionality 4: Activating win screen after 2 finished laps
+    /// </summary>
     private float _startTime;
     public float _lapTime;
     private bool _startCountdown;
@@ -13,6 +21,7 @@ public class GameManager : MonoBehaviour
     public GameObject Player;
     public GameObject WinScreen;
     public GameObject HUD;
+    public Text Laps;
 
 
     void Start()
@@ -29,34 +38,31 @@ public class GameManager : MonoBehaviour
     {
         _startCountdown = true;
     }
-
+    //Funktionality 4 + 2
     public void GetLapTime()
     {
         if (_lapped == true)
         {
             Lap2 = _lapTime - Lap1;
-            //Debug.Log(Mathf.RoundToInt(Lap2)); //Repleace this Debug with a hud change
             HUD.SetActive(false);
             WinScreen.SetActive(true);
             Time.timeScale = 0.25f;
-
+            Laps.text = "Lap 1: " + Lap1.ToString("F2") + "\nLap 2: " + Lap2.ToString("F2");
         }
 
         if (_lapped == false)
         {
             Lap1 = _lapTime;
-            //Debug.Log(Mathf.RoundToInt(Lap1)); //Repleace this Debug with a hud change
             _lapped = true;
         }
     }
 
-
+    //Funktionality 1 + 3
     private void Timer()
     {
         if (_startCountdown == true)
         {
             CountdownLength -= Time.deltaTime;
-            //Debug.Log(Mathf.RoundToInt(CountdownLength)); //Replace the debugs with hud changes
             if (CountdownLength <= 0)
             {
                 _startCountdown = false;

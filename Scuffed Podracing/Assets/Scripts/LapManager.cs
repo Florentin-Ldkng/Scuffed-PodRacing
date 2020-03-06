@@ -2,6 +2,12 @@
 
 public class LapManager : MonoBehaviour
 {
+    /// <summary>
+    /// Florentin Lüdkeing im sry 3.0 ;-;
+    /// The list of checkpoints. 
+    /// Gets set true if the player crosses a checkpoint. 
+    /// If the playe crosses the start all checkpoints get deactivated and the lap time gets saved
+    /// </summary>
     public bool Checkpoint1;
     public bool Checkpoint2;
     public bool Checkpoint3;

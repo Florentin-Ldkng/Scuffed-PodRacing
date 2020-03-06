@@ -1,11 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 public class AiScript : MonoBehaviour
 {
-
+    /// <summary>
+    /// Mortitz Vogt 
+    /// Makes the Ai drive from destiation to destination (Waypoint system style)
+    /// </summary>
     public GameObject CharacterDestination1;
     public GameObject CharacterDestination2;
     public GameObject CharacterDestination3;
@@ -18,16 +19,11 @@ public class AiScript : MonoBehaviour
     private bool _stared = false;
     NavMeshAgent theAgent;
 
-    void Start()
-    {
-    }
-
-
     void Update()
     {
          MoveLocker();
     }
-
+    
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Destination1")
@@ -64,6 +60,10 @@ public class AiScript : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Florentin Lüdeking
+    /// Movement Locked if isMovable is false for the player
+    /// </summary>
     private void MoveLocker()
     {
         if (GetMovable.IsMoveable == true)

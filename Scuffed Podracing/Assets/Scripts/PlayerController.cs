@@ -2,11 +2,17 @@
 
 public class PlayerController : MonoBehaviour
 {
+    /// <summary>
+    /// Florentin Lüdeking
+    /// </summary>
     public bool IsMoveable = false;
     public float Speed = 0;
-    private Vector3 _lastPosition = Vector3.zero;
     public AudioSource EngineSource;
+    private Vector3 _lastPosition = Vector3.zero;    
 
+    /// <summary>
+    /// Movement and getting the speed of the player and changing the volume of the engine according to the speed of the player
+    /// </summary>
     void Update()
     {
         Movement();

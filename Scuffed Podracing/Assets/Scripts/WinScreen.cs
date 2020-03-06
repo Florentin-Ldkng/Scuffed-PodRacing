@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class WinScreen : MonoBehaviour
 {
     /// <summary>
+    /// Kevin Keim
     /// Function for "NextLevelButton." Loads next Level.
     /// </summary>
     public void NextLevel()

@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LoseScreen : MonoBehaviour
 {
     /// <summary>
+    /// Kevin Keim
     /// Function for "TryAgainButton" to start the game again
     /// </summary>
     public void TryAgain()

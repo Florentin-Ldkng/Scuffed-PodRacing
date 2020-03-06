@@ -2,6 +2,11 @@
 
 public class Checkpoint3 : MonoBehaviour
 {
+    /// <summary>
+    /// sets the checkpoint of the player to the 3 Checkpoint
+    /// Florentin Lüdeking
+    /// </summary>
+    /// <param name="other">the collider</param>
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))

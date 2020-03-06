@@ -2,7 +2,9 @@
 
 public class CollisionHandler : MonoBehaviour
 {
-
+    /// <summary>
+    /// Florentin Lüdeking im sry 2.0 ;-;
+    /// </summary>
     public GameObject Respawner;
     public GameObject Start;
     public GameObject Checkpoint1;
@@ -12,8 +14,13 @@ public class CollisionHandler : MonoBehaviour
     public GameObject LoseScreen;
     public Health Health;
     public Rigidbody RB;
+    public GameObject Hud;
     private AudioSource _audioSource;
 
+    /// <summary>
+    /// if the player crashes into the map or an enemy he respawns and loses health
+    /// </summary>
+    /// <param name="other"></param>
     void OnCollisionEnter(Collision other)
     {
        if (other.gameObject.CompareTag("Map"))
@@ -25,6 +32,7 @@ public class CollisionHandler : MonoBehaviour
             {
                 LoseScreen.SetActive(true);
                 Time.timeScale = 0;
+                Hud.SetActive(false);
             }
             
 
@@ -44,6 +52,9 @@ public class CollisionHandler : MonoBehaviour
         } 
     }
 
+    /// <summary>
+    /// The respawning function so the player spawns at the last checkpoint he crossed
+    /// </summary>
     private void Respawning()
     {
         var respawnPositionCheck = Respawner.GetComponent<LapManager>();
@@ -79,6 +90,9 @@ public class CollisionHandler : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// zeros out the rigidbody 
+    /// </summary>
     private void RigidBodyZero()
     {
         RB.velocity = Vector3.zero;

@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
     /// <summary>
     /// Play Button Function for starting the game
+    /// Kevin Keim
     /// </summary>
     public void PlayGame()
     {

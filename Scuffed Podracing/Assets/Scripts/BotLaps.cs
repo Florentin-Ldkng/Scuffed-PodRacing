@@ -2,22 +2,21 @@
 
 public class BotLaps : MonoBehaviour
 {
+    /// <summary>
+    /// Florentin Lüdeking
+    /// Counts the Laps that the bots drove and stops the game if a bot drove 2 laps
+    /// </summary>
     public int _lapCounter;
-
+    public GameObject HUD;
     public GameObject LoseScreen;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (_lapCounter >= 3)
         {
             LoseScreen.SetActive(true);
             Time.timeScale = 0f;
+            HUD.SetActive(false);
         }   
     }
 

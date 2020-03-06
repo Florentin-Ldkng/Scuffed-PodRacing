@@ -1,25 +1,32 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    private bool Paused = false;
-
+    /// <summary>
+    /// Kevin Keim
+    /// </summary>
+    private bool paused = false;
+    public GameObject Hud;
     public GameObject pauseMenu;
 
+    /// <summary>
+    /// Triggers pause menu
+    /// </summary>
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (Paused)
+            if (paused)
             {
                 Continue();
+                Hud.SetActive(true);
             }
             else
             {
                 Pause();
+                Hud.SetActive(false);
+                
             }
         }
     }
@@ -30,8 +37,9 @@ public class PauseMenu : MonoBehaviour
     public void Continue()
     {
         pauseMenu.SetActive(false);
-        Paused = false;
+        paused = false;
         Time.timeScale = 1f;
+        Hud.SetActive(true);
     }
 
     /// <summary>
@@ -40,7 +48,7 @@ public class PauseMenu : MonoBehaviour
     void Pause()
     {
         pauseMenu.SetActive(true);
-        Paused = true;
+        paused = true;
         Time.timeScale = 0f;
     }
 

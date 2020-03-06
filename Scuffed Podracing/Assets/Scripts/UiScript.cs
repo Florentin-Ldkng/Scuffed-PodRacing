@@ -3,19 +3,17 @@ using UnityEngine.UI;
 
 public class UiScript : MonoBehaviour
 {
+    /// <summary>
+    /// Healthbar Functionality, Hud Functionality
+    /// Moritz Vogt
+    /// </summary>
     public Text TimerText;
     public Text LapTime1Text;
     public Text LapTime2Text;
     public GameManager gameManager;
     public Health health;
     public Slider HealthBar;
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
         HealthBar.value = health.TotalHealth;

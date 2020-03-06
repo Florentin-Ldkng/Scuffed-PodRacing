@@ -2,6 +2,10 @@
 
 public class Health : MonoBehaviour
 {
+    /// <summary>
+    /// Florentin Lüdeking
+    /// Health Managment 
+    /// </summary>
     public float TotalHealth = 100f;
     
     private void Start()
