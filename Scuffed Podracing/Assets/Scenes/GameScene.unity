@@ -30630,7 +30630,8 @@ PrefabInstance:
       propertyPath: GameManager
       value: 
       objectReference: {fileID: 2089479210}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1510364455951335, guid: 1637df5ddb0d3cf4884b03b4de54bfdb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1637df5ddb0d3cf4884b03b4de54bfdb, type: 3}
 --- !u!114 &1314189713 stripped
 MonoBehaviour:
