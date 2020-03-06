@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 7570223011975531903}
   - component: {fileID: 7570223011975531900}
   - component: {fileID: 7570223011975531901}
-  - component: {fileID: 1510364455951335}
+  - component: {fileID: 1415603383}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -162,7 +162,7 @@ Transform:
   m_GameObject: {fileID: 7569293215814580766}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 173.9, y: 12.8, z: 79.4}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 7570223011667578038}
   - {fileID: 1365753409}
@@ -309,6 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsMoveable: 0
+  Speed: 0
   EngineSource: {fileID: 1365753410}
 --- !u!114 &7570223011975531901
 MonoBehaviour:
@@ -328,7 +329,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   health: {fileID: 7570223011975531902}
   HealthBar: {fileID: 0}
---- !u!82 &1510364455951335
+--- !u!82 &1415603383
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -450,7 +451,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7570223011667578035}
   m_LocalRotation: {x: 0.12420601, y: -0.000000059604638, z: 0.00000001117587, w: 0.99225646}
-  m_LocalPosition: {x: -0.000001589457, y: 9.969999, z: -19.309998}
+  m_LocalPosition: {x: -0, y: 10.5, z: -21.5}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 7566352066974949414}
